@@ -2,9 +2,10 @@
 import os, re, yaml
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageOps
 
-ROOT = '/home/claude/lesmielleries'
+import pathlib
+ROOT = str(pathlib.Path(__file__).resolve().parents[1])
 PUB = f'{ROOT}/public'
-FONTS = '/home/claude/media/fonts'
+FONTS = f'{ROOT}/scripts/fonts'  # TTF statiques (Fraunces, Inter)
 W, H = 1200, 630
 HONEY = (30, 16, 6)
 CREAM = (251, 244, 230)

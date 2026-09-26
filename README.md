@@ -91,7 +91,7 @@ Retirer un accès = supprimer l'e-mail de `STUDIO_GOOGLE_MODERATORS` puis redép
 | Élément | Où |
 |---|---|
 | Titre, description, Open Graph, Twitter (URL absolues) | `app/composables/useSeo.ts` → `usePageSeo()` sur chaque page |
-| Images de partage 1200×630 (FR/EN, 38 images) | `public/og/` — régénérables avec le script de génération |
+| Images de partage 1200×630 (FR/EN, 38 images) | `public/og/` — régénérables : `python3 scripts/generate-og.py` (Pillow + PyYAML) |
 | Canonical + `hreflang` FR/EN/x-default | automatique (`@nuxtjs/i18n`) |
 | `sitemap.xml` (pages, produits, articles, images, alternatives FR/EN) | `server/routes/sitemap.xml.ts` — suit le contenu automatiquement |
 | `robots.txt` (Studio bloqué, robots IA autorisés) | `server/routes/robots.txt.ts` |
