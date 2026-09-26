@@ -86,7 +86,7 @@ const cells = computed(() => {
     <!-- ============ HERO ============ -->
     <section ref="hero" class="hero">
       <div class="hero__media">
-        <BgVideo eager :rate="0.9" poster="/images/ambiance/hero-poster.webp" webm="/videos/hero-1280.webm" mp4="/videos/hero-1280.mp4" mp4-mobile="/videos/hero-720.mp4" />
+        <BgVideo eager poster="/images/ambiance/hero-poster.webp" webm="/videos/hero-1280.webm" mp4="/videos/hero-1280.mp4" mp4-mobile="/videos/hero-720.mp4" />
       </div>
       <div class="hero__shade" />
       <div class="hero__content container">

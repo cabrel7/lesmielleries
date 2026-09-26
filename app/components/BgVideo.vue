@@ -41,6 +41,10 @@ onMounted(() => {
   // La vidéo n'est révélée qu'une fois la 1re image réellement affichée
   const reveal = () => { playing.value = true }
   v.addEventListener('playing', reveal, { once: true })
+  if (props.rate !== 1) {
+    const keepRate = () => { if (v.playbackRate !== props.rate) v.playbackRate = props.rate }
+    for (const ev of ['playing', 'seeked', 'ratechange', 'loadeddata']) v.addEventListener(ev, keepRate)
+  }
 
   const start = () => {
     v.src = pickSource(v)

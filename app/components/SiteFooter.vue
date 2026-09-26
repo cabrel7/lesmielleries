@@ -112,6 +112,7 @@ ul a:hover { color: var(--yellow); }
   opacity: 0.7;
 }
 .ftr__bottom a:hover { color: var(--yellow); }
+@media (max-width: 719px) { .ftr__bottom { padding-bottom: calc(5.5rem + env(safe-area-inset-bottom)); } }
 @media (min-width: 720px) {
   .ftr__grid { grid-template-columns: 1fr 1fr; }
 }
