@@ -1,0 +1,302 @@
+{
+  "nav": {
+    "home": "Home",
+    "story": "Our story",
+    "products": "Our products",
+    "pro": "Professionals",
+    "blog": "Journal",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
+    "order": "Order"
+  },
+  "common": {
+    "whatsapp": "Order on WhatsApp",
+    "whatsappShort": "WhatsApp",
+    "quote": "Request a quote",
+    "discover": "Discover",
+    "seeProduct": "View product",
+    "allProducts": "See the full range",
+    "readMore": "Read article",
+    "minRead": "{n} min read",
+    "back": "Back",
+    "since": "Since 2000",
+    "scroll": "Scroll",
+    "photoPending": "Temporary visual — photo shoot coming soon",
+    "skip": "Skip to content"
+  },
+  "wa": {
+    "hello": "Hello Les Mielleries,",
+    "product": "I would like to order: {product}",
+    "format": "Format: {format}",
+    "generic": "Hello Les Mielleries, I would like some information about your products."
+  },
+  "home": {
+    "seoTitle": "Les Mielleries — Pure, natural honey from Cameroon",
+    "seoDesc": "Cameroon's leading honey packer and exporter. Savannah honey, mountain and forest honey, PGI Oku white honey, beeswax and propolis.",
+    "eyebrow": "Since 2000 · Douala, Cameroon",
+    "title1": "Nature",
+    "title2": "on your table",
+    "lead": "Raw honeys sourced from beekeepers across Cameroon's three main beekeeping regions. Filtered, never processed.",
+    "cta1": "Discover our honeys",
+    "marquee": [
+      "Savannah Honey",
+      "Oku White Honey",
+      "Vernovia Honey",
+      "Eucalyptus Honey",
+      "Mountain & Forest",
+      "Beeswax",
+      "Propolis"
+    ],
+    "manifestoLabel": "Our story",
+    "manifesto": "It all began in 2000, with a group of beekeepers. Twenty-five years later, we remain true to the same belief: honey deserves respect. We harvest it far from cities, we filter it without heating it, and we pay our beekeepers the price we agree on together. Because fair honey starts with a fair partnership.",
+    "manifestoSign": "Jacques Georges Badjang, founder",
+    "manifestoCta": "Read our story",
+    "stats": {
+      "honey": "tonnes of honey a year",
+      "wax": "tonnes of beeswax a year",
+      "countries": "export countries",
+      "regions": "beekeeping regions",
+      "since": "year founded"
+    },
+    "terroirLabel": "Our terroirs",
+    "terroirTitle": "Three regions, three characters",
+    "terroirLead": "Hives are set far from cities and industrial areas, in a healthy environment.",
+    "regions": [
+      {
+        "key": "savane",
+        "name": "Savannah",
+        "area": "North · Adamawa",
+        "text": "Generous amber honeys, born from sun-drenched flora."
+      },
+      {
+        "key": "montagnes",
+        "name": "Mountains & Forests",
+        "area": "West · North-West",
+        "text": "Exceptional biodiversity: Vernovia, eucalyptus, multifloral."
+      },
+      {
+        "key": "oku",
+        "name": "Mount Oku",
+        "area": "North-West · PGI",
+        "text": "The rare Oku white honey, protected by a Geographical Indication."
+      }
+    ],
+    "hq": "Head office & packing · Douala",
+    "rangeLabel": "The range",
+    "rangeTitle": "Honeys that tell the story of a region",
+    "benefitsLabel": "Honey",
+    "benefitsTitle": "An exceptional food",
+    "food": "As a food",
+    "foodText": "In tea, coffee, herbal tea, or as a drink with water and lemon. As a sweetener in doughnuts, bread and cakes. It is also used in biscuits, cereals, yoghurts, mead, wines and liqueurs.",
+    "tradition": "In tradition",
+    "traditionText": "Used since time immemorial for its virtues: it soothes the throat, provides natural energy and helps in times of fatigue. It is traditionally associated with well-being and recovery.",
+    "benefitsNote": "Honey is not a substitute for medical advice. Not suitable for children under one year old.",
+    "proLabel": "Professionals & export",
+    "proTitle": "Cameroon's leading honey packer and exporter",
+    "proText": "Food industry, distributors, hospitality, cosmetics: we supply our honeys in drums and jerrycans and our beeswax in 22 kg blocks, in Cameroon and in more than 5 countries.",
+    "proCta": "Professional area",
+    "blogLabel": "The journal",
+    "blogTitle": "Tips, terroirs and recipes",
+    "blogCta": "All articles",
+    "finalTitle": "A question, an order?",
+    "finalText": "Our team replies directly on WhatsApp.",
+    "proTags": [
+      "Industry",
+      "Export",
+      "Bulk",
+      "22 kg wax"
+    ]
+  },
+  "story": {
+    "seoTitle": "Our story — Les Mielleries",
+    "seoDesc": "From a beekeepers' group in 2000 to a limited company in 2011: the story, mission and values of Les Mielleries.",
+    "eyebrow": "About us",
+    "title": "Twenty-five years serving Cameroonian honey",
+    "lead": "Les Mielleries is the fruit of the dedication, patience and environmental and social commitment of its founder, Jacques Georges Badjang.",
+    "timelineTitle": "Milestones",
+    "timeline": [
+      {
+        "year": "2000",
+        "title": "A beekeepers' group",
+        "text": "A Community Interest Group (GIC) of beekeepers is founded."
+      },
+      {
+        "year": "2011",
+        "title": "The company is born",
+        "text": "The group becomes Les Mielleries Sarl and structures the supply chain: collection, filtering, packing."
+      },
+      {
+        "year": "Today",
+        "title": "National leader",
+        "text": "Cameroon's leading honey packer and exporter, present in more than 5 countries."
+      }
+    ],
+    "suppliersTitle": "Our suppliers",
+    "suppliersText": "Most of our honey comes from producers organised in groups and cooperatives spread across Cameroon's three main beekeeping regions, as well as independent producers affiliated with our network.",
+    "missionTitle": "Our mission",
+    "missionText": "To go beyond production: processing (filtering) and transforming hive products before sale, to supply quality products to Cameroonian and foreign markets, with the best conditions of cost, lead time and reliability.",
+    "valuesTitle": "Our values",
+    "values": [
+      {
+        "title": "Respect for customers",
+        "text": "Products that meet their needs, under optimal conditions."
+      },
+      {
+        "title": "Valued partners",
+        "text": "Shareholders, suppliers, banks, the State: relationships built on trust."
+      },
+      {
+        "title": "Respected teams",
+        "text": "A working environment that supports everyone's physical and mental health."
+      },
+      {
+        "title": "Fair trade",
+        "text": "Purchase prices agreed jointly with beekeepers, and support to improve their production methods."
+      }
+    ],
+    "quote": "Regular honey consumption is a credible alternative for balanced meals in Cameroonian households."
+  },
+  "products": {
+    "seoTitle": "Our products — Les Mielleries",
+    "seoDesc": "Multifloral and monofloral honeys, PGI Oku white honey, honey sticks, beeswax, propolis and bulk supply for professionals.",
+    "eyebrow": "Our products",
+    "title": "All the richness of the hive",
+    "lead": "We produce a wide selection of the finest honeys to always guarantee the best quality: around 300 tonnes of natural honey and 200 tonnes of beeswax a year.",
+    "filters": {
+      "all": "All",
+      "miel": "Honeys",
+      "ruche": "Hive products",
+      "pro": "Bulk & pro"
+    },
+    "count": "{n} product | {n} products",
+    "packaging": "Packed in jars, bottles, jerrycans and drums."
+  },
+  "product": {
+    "origin": "Origin",
+    "type": "Type",
+    "color": "Colour",
+    "taste": "Taste",
+    "texture": "Texture",
+    "formats": "Available formats",
+    "chooseFormat": "Choose a format",
+    "usages": "Uses",
+    "benefits": "Why you'll love it",
+    "storage": "Storage",
+    "orderWa": "Order on WhatsApp",
+    "orderPro": "Professional quote",
+    "related": "You may also like",
+    "promise": [
+      "100% pure and natural",
+      "Filtered, never heated",
+      "Packed in Douala"
+    ],
+    "zoom": "Enlarge image",
+    "prev": "Previous image",
+    "next": "Next image"
+  },
+  "pro": {
+    "seoTitle": "Professionals & export — Les Mielleries",
+    "seoDesc": "Bulk honey, drums, jerrycans, beeswax in 22 kg blocks, propolis: request a quote from Les Mielleries.",
+    "eyebrow": "Professionals & export",
+    "title": "Your honey partner, from drum to container",
+    "lead": "With around 300 tonnes of honey and 200 tonnes of beeswax a year, we support manufacturers, distributors and exporters.",
+    "offersTitle": "What we offer",
+    "offers": [
+      {
+        "title": "Bulk honey",
+        "text": "Multifloral and monofloral honeys in drums and jerrycans, with traceable origin."
+      },
+      {
+        "title": "Beeswax",
+        "text": "White, yellow or brown, in 22 kg blocks or 1 to 5 kg formats."
+      },
+      {
+        "title": "Propolis",
+        "text": "In 1 kg bags, for laboratories and cosmetics."
+      },
+      {
+        "title": "Hospitality",
+        "text": "20 g honey sticks by the carton, for catering and hotels."
+      }
+    ],
+    "sectorsTitle": "Who uses our honey",
+    "sectors": [
+      "Biscuits & cereals",
+      "Dairy products",
+      "Beverages: mead, wines, liqueurs",
+      "Cosmetics",
+      "Retail & distribution",
+      "Hospitality"
+    ],
+    "formTitle": "Quote request",
+    "formLead": "Tell us what you need: we reply within 2 business days."
+  },
+  "form": {
+    "name": "Full name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone",
+    "country": "Country",
+    "product": "Product",
+    "volume": "Estimated volume",
+    "volumePh": "e.g. 2 drums, 500 kg, 1 container…",
+    "message": "Message",
+    "subject": "Subject",
+    "subjects": [
+      "Personal order",
+      "Professional quote",
+      "Export",
+      "Other"
+    ],
+    "sendWa": "Send via WhatsApp",
+    "sendMail": "Send by email",
+    "required": "Required fields",
+    "choose": "Choose…",
+    "other": "Other / several products",
+    "privacy": "Your details are only used to answer your request."
+  },
+  "contact": {
+    "seoTitle": "Contact — Les Mielleries",
+    "seoDesc": "Contact Les Mielleries in Douala: phone, WhatsApp, email.",
+    "eyebrow": "Contact",
+    "title": "Let's talk honey",
+    "lead": "Individual or professional, a question or an order: write to us, we reply quickly.",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Opening hours",
+    "formTitle": "Send us a message"
+  },
+  "blog": {
+    "seoTitle": "The journal — Les Mielleries",
+    "seoDesc": "Tips, terroirs, recipes: everything about honey from Cameroon.",
+    "eyebrow": "The journal",
+    "title": "Tips, terroirs & recipes",
+    "lead": "Everything you ever wanted to know about honey.",
+    "all": "All",
+    "related": "Read next",
+    "share": "Share",
+    "toc": "Contents"
+  },
+  "legal": {
+    "seoTitle": "Legal notice — Les Mielleries",
+    "title": "Legal notice"
+  },
+  "footer": {
+    "quote": "Nature on your table.",
+    "about": "Cameroon's leading honey packer and exporter. Raw honeys, filtered, never processed.",
+    "explore": "Explore",
+    "products": "Products",
+    "contact": "Contact",
+    "legal": "Legal notice",
+    "rights": "All rights reserved.",
+    "made": "Website by Groupe ELS"
+  },
+  "error": {
+    "title": "Page not found",
+    "text": "This page has flown away like a bee.",
+    "home": "Back to home"
+  }
+}

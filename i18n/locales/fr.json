@@ -1,0 +1,302 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "story": "Notre histoire",
+    "products": "Nos produits",
+    "pro": "Professionnels",
+    "blog": "Blog",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Fermer",
+    "order": "Commander"
+  },
+  "common": {
+    "whatsapp": "Commander sur WhatsApp",
+    "whatsappShort": "WhatsApp",
+    "quote": "Demander un devis",
+    "discover": "Découvrir",
+    "seeProduct": "Voir le produit",
+    "allProducts": "Voir toute la gamme",
+    "readMore": "Lire l'article",
+    "minRead": "{n} min de lecture",
+    "back": "Retour",
+    "since": "Depuis 2000",
+    "scroll": "Défiler",
+    "photoPending": "Visuel provisoire — séance photo à venir",
+    "skip": "Aller au contenu"
+  },
+  "wa": {
+    "hello": "Bonjour Les Mielleries,",
+    "product": "Je souhaite commander : {product}",
+    "format": "Format : {format}",
+    "generic": "Bonjour Les Mielleries, je souhaite avoir des informations sur vos produits."
+  },
+  "home": {
+    "seoTitle": "Les Mielleries — Miel pur et naturel du Cameroun",
+    "seoDesc": "Premier conditionneur et exportateur de miel au Cameroun. Miels de savane, de montagnes et forêts, miel blanc d'Oku IGP, cire d'abeille et propolis.",
+    "eyebrow": "Depuis 2000 · Douala, Cameroun",
+    "title1": "La nature",
+    "title2": "à votre table",
+    "lead": "Des miels bruts, récoltés auprès des apiculteurs des trois grandes régions apicoles du Cameroun. Filtrés, jamais préparés.",
+    "cta1": "Découvrir nos miels",
+    "marquee": [
+      "Miel de Savane",
+      "Miel blanc d'Oku",
+      "Miel de Vernovia",
+      "Miel d'Eucalyptus",
+      "Montagnes & Forêts",
+      "Cire d'abeille",
+      "Propolis"
+    ],
+    "manifestoLabel": "Notre histoire",
+    "manifesto": "Tout a commencé en 2000, avec un groupement d'apiculteurs. Vingt-cinq ans plus tard, nous restons fidèles à la même conviction : le miel se respecte. Nous le récoltons loin des villes, nous le filtrons sans le chauffer, et nous payons nos apiculteurs au prix convenu ensemble. Parce qu'un miel juste commence par un partenariat juste.",
+    "manifestoSign": "Jacques Georges Badjang, fondateur",
+    "manifestoCta": "Lire notre histoire",
+    "stats": {
+      "honey": "tonnes de miel par an",
+      "wax": "tonnes de cire par an",
+      "countries": "pays d'export",
+      "regions": "régions apicoles",
+      "since": "année de création"
+    },
+    "terroirLabel": "Nos terroirs",
+    "terroirTitle": "Trois régions, trois caractères",
+    "terroirLead": "Les ruches sont installées loin des agglomérations et des zones industrielles, dans un environnement sain.",
+    "regions": [
+      {
+        "key": "savane",
+        "name": "Savane",
+        "area": "Nord · Adamaoua",
+        "text": "Des miels ambrés et généreux, nés d'une flore ensoleillée."
+      },
+      {
+        "key": "montagnes",
+        "name": "Montagnes & Forêts",
+        "area": "Ouest · Nord-Ouest",
+        "text": "Une biodiversité exceptionnelle : Vernovia, eucalyptus, multifloral."
+      },
+      {
+        "key": "oku",
+        "name": "Mont Oku",
+        "area": "Nord-Ouest · IGP",
+        "text": "Le rare miel blanc d'Oku, protégé par une Indication Géographique."
+      }
+    ],
+    "hq": "Siège & conditionnement · Douala",
+    "rangeLabel": "La gamme",
+    "rangeTitle": "Des miels qui racontent une région",
+    "benefitsLabel": "Le miel",
+    "benefitsTitle": "Un aliment d'exception",
+    "food": "Comme aliment",
+    "foodText": "Dans le thé, le café, une tisane, ou en jus avec de l'eau et du citron. Comme édulcorant dans les beignets, le pain, les gâteaux et les cakes. Il entre aussi dans la confection de biscuits, céréales, yaourts, hydromel, vins et liqueurs.",
+    "tradition": "Dans la tradition",
+    "traditionText": "Utilisé depuis toujours pour ses vertus : il adoucit la gorge, apporte une énergie naturelle et accompagne les périodes de fatigue. Il est traditionnellement associé au bien-être et à la récupération.",
+    "benefitsNote": "Le miel ne remplace pas un avis médical. Déconseillé aux enfants de moins d'un an.",
+    "proLabel": "Professionnels & export",
+    "proTitle": "Le premier conditionneur et exportateur de miel du Cameroun",
+    "proText": "Industrie agroalimentaire, distributeurs, hôtellerie, cosmétique : nous livrons nos miels en fût et en bidon, et notre cire en blocs de 22 kg, au Cameroun et dans plus de 5 pays.",
+    "proCta": "Espace professionnels",
+    "blogLabel": "Le journal",
+    "blogTitle": "Conseils, terroirs et recettes",
+    "blogCta": "Tous les articles",
+    "finalTitle": "Une question, une commande ?",
+    "finalText": "Notre équipe vous répond directement sur WhatsApp.",
+    "proTags": [
+      "Industrie",
+      "Export",
+      "Vrac",
+      "Cire 22 kg"
+    ]
+  },
+  "story": {
+    "seoTitle": "Notre histoire — Les Mielleries",
+    "seoDesc": "D'un groupement d'apiculteurs en 2000 à une SARL en 2011 : l'histoire, la mission et les valeurs des Mielleries.",
+    "eyebrow": "Qui sommes-nous",
+    "title": "Vingt-cinq ans au service du miel camerounais",
+    "lead": "Les Mielleries est le fruit de l'abnégation, de la patience et de l'engagement environnemental et social de son promoteur, Jacques Georges Badjang.",
+    "timelineTitle": "Les grandes étapes",
+    "timeline": [
+      {
+        "year": "2000",
+        "title": "Un GIC d'apiculteurs",
+        "text": "Création d'un Groupement d'Intérêt Communautaire réunissant des apiculteurs."
+      },
+      {
+        "year": "2011",
+        "title": "Naissance de la SARL",
+        "text": "Le groupement devient Les Mielleries Sarl et structure la filière : collecte, filtrage, conditionnement."
+      },
+      {
+        "year": "Aujourd'hui",
+        "title": "Leader national",
+        "text": "Premier conditionneur et exportateur de miel du Cameroun, présent dans plus de 5 pays."
+      }
+    ],
+    "suppliersTitle": "Nos fournisseurs",
+    "suppliersText": "La majeure partie de notre miel provient de producteurs organisés en GIC et coopératives, disséminés dans les trois grandes régions apicoles du Cameroun, ainsi que de producteurs isolés affiliés à notre réseau.",
+    "missionTitle": "Notre mission",
+    "missionText": "Aller au-delà de la production : traiter (filtrer) et transformer les produits apicoles avant leur commercialisation, pour approvisionner en qualité les marchés camerounais et étrangers, dans les meilleures conditions de coût, de délai et de fiabilité.",
+    "valuesTitle": "Nos valeurs",
+    "values": [
+      {
+        "title": "Respect des clients",
+        "text": "Des produits aptes à satisfaire leurs besoins, dans des conditions optimales."
+      },
+      {
+        "title": "Partenaires considérés",
+        "text": "Actionnaires, fournisseurs, banques, État : des relations de confiance."
+      },
+      {
+        "title": "Équipes respectées",
+        "text": "Un environnement de travail favorable à la santé physique et mentale de chacun."
+      },
+      {
+        "title": "Commerce juste",
+        "text": "Des prix d'achat fixés d'un commun accord avec les apiculteurs, et une assistance pour améliorer leurs modes de production."
+      }
+    ],
+    "quote": "La consommation assidue du miel représente une alternative crédible à l'équilibre de la table des ménages camerounais."
+  },
+  "products": {
+    "seoTitle": "Nos produits — Les Mielleries",
+    "seoDesc": "Miels multifloraux et unifloraux, miel blanc d'Oku IGP, barrettes, cire d'abeille, propolis et vrac pour les professionnels.",
+    "eyebrow": "Nos produits",
+    "title": "Toute la richesse de la ruche",
+    "lead": "Nous produisons une large sélection des meilleurs miels, afin de toujours garantir la meilleure qualité : environ 300 tonnes de miel naturel et 200 tonnes de cire d'abeille par an.",
+    "filters": {
+      "all": "Tout",
+      "miel": "Miels",
+      "ruche": "Produits de la ruche",
+      "pro": "Vrac & pro"
+    },
+    "count": "{n} produit | {n} produits",
+    "packaging": "Conditionnés en pot, en bouteille, en bidon et en fût."
+  },
+  "product": {
+    "origin": "Origine",
+    "type": "Type",
+    "color": "Couleur",
+    "taste": "Goût",
+    "texture": "Texture",
+    "formats": "Formats disponibles",
+    "chooseFormat": "Choisissez un format",
+    "usages": "Utilisations",
+    "benefits": "Pourquoi l'aimer",
+    "storage": "Conservation",
+    "orderWa": "Commander sur WhatsApp",
+    "orderPro": "Devis professionnel",
+    "related": "Vous aimerez aussi",
+    "promise": [
+      "100 % pur et naturel",
+      "Filtré, jamais chauffé",
+      "Conditionné à Douala"
+    ],
+    "zoom": "Agrandir l'image",
+    "prev": "Image précédente",
+    "next": "Image suivante"
+  },
+  "pro": {
+    "seoTitle": "Professionnels & export — Les Mielleries",
+    "seoDesc": "Miel en vrac, fûts, bidons, cire d'abeille en blocs de 22 kg, propolis : demandez un devis aux Mielleries.",
+    "eyebrow": "Professionnels & export",
+    "title": "Votre partenaire miel, du fût au conteneur",
+    "lead": "Avec environ 300 tonnes de miel et 200 tonnes de cire par an, nous accompagnons industriels, distributeurs et exportateurs.",
+    "offersTitle": "Ce que nous proposons",
+    "offers": [
+      {
+        "title": "Miel en vrac",
+        "text": "Miels multifloraux et unifloraux en fût et en bidon, origine tracée."
+      },
+      {
+        "title": "Cire d'abeille",
+        "text": "Blanche, jaune ou brune, en blocs de 22 kg ou formats de 1 à 5 kg."
+      },
+      {
+        "title": "Propolis",
+        "text": "En sachet de 1 kg, pour laboratoires et cosmétique."
+      },
+      {
+        "title": "Hôtellerie & restauration",
+        "text": "Barrettes de miel 20 g en carton, pour la restauration collective et l'hôtellerie."
+      }
+    ],
+    "sectorsTitle": "Ils utilisent notre miel",
+    "sectors": [
+      "Biscuiterie & céréales",
+      "Produits laitiers",
+      "Boissons : hydromel, vins, liqueurs",
+      "Cosmétique",
+      "Distribution",
+      "Hôtellerie"
+    ],
+    "formTitle": "Demande de devis",
+    "formLead": "Décrivez votre besoin : nous vous répondons sous 48 h ouvrées."
+  },
+  "form": {
+    "name": "Nom et prénom",
+    "company": "Entreprise",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "country": "Pays",
+    "product": "Produit",
+    "volume": "Volume estimé",
+    "volumePh": "ex. 2 fûts, 500 kg, 1 conteneur…",
+    "message": "Message",
+    "subject": "Objet",
+    "subjects": [
+      "Commande particulier",
+      "Devis professionnel",
+      "Export",
+      "Autre"
+    ],
+    "sendWa": "Envoyer via WhatsApp",
+    "sendMail": "Envoyer par e-mail",
+    "required": "Champs obligatoires",
+    "choose": "Choisir…",
+    "other": "Autre / plusieurs produits",
+    "privacy": "Vos informations servent uniquement à répondre à votre demande."
+  },
+  "contact": {
+    "seoTitle": "Contact — Les Mielleries",
+    "seoDesc": "Contactez Les Mielleries à Douala : téléphone, WhatsApp, e-mail.",
+    "eyebrow": "Contact",
+    "title": "Parlons miel",
+    "lead": "Particulier ou professionnel, une question ou une commande : écrivez-nous, nous répondons vite.",
+    "phone": "Téléphone",
+    "whatsapp": "WhatsApp",
+    "email": "E-mail",
+    "address": "Adresse",
+    "hours": "Horaires",
+    "formTitle": "Envoyez-nous un message"
+  },
+  "blog": {
+    "seoTitle": "Le journal — Les Mielleries",
+    "seoDesc": "Conseils, terroirs, recettes : tout savoir sur le miel du Cameroun.",
+    "eyebrow": "Le journal",
+    "title": "Conseils, terroirs & recettes",
+    "lead": "Tout ce que vous avez toujours voulu savoir sur le miel.",
+    "all": "Tous",
+    "related": "À lire aussi",
+    "share": "Partager",
+    "toc": "Sommaire"
+  },
+  "legal": {
+    "seoTitle": "Mentions légales — Les Mielleries",
+    "title": "Mentions légales"
+  },
+  "footer": {
+    "quote": "La nature à votre table.",
+    "about": "Premier conditionneur et exportateur de miel du Cameroun. Miels bruts, filtrés, jamais préparés.",
+    "explore": "Explorer",
+    "products": "Produits",
+    "contact": "Contact",
+    "legal": "Mentions légales",
+    "rights": "Tous droits réservés.",
+    "made": "Site conçu par Groupe ELS"
+  },
+  "error": {
+    "title": "Page introuvable",
+    "text": "Cette page s'est envolée comme une abeille.",
+    "home": "Retour à l'accueil"
+  }
+}
