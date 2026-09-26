@@ -59,6 +59,33 @@ public/
 
 > Netlify fonctionne aussi (build : `npm run build`). Un hébergement **purement statique** (`npm run generate`) fonctionne pour le site, mais **pas** pour Nuxt Studio en production.
 
+## Nuxt Studio : accès réservé au client (connexion Google)
+
+Seules les adresses listées dans `STUDIO_GOOGLE_MODERATORS` peuvent entrer dans `/_studio`. Tout autre compte Google est refusé.
+
+1. **Google Cloud** ([console.cloud.google.com](https://console.cloud.google.com)) → nouveau projet « Les Mielleries Studio »
+   - *APIs & Services → OAuth consent screen* : type **External**, nom de l'app, e-mail de support → enregistrer, puis **Publish app** (les scopes email/profile ne demandent pas de vérification Google).
+   - *Credentials → Create credentials → OAuth client ID* → **Web application**
+     - Authorized redirect URIs : `https://lesmielleries.com/__nuxt_studio/auth/google` (+ `https://<projet>.vercel.app/__nuxt_studio/auth/google` pour tester)
+   - Copier **Client ID** et **Client secret**.
+2. **GitHub** (compte `cabrel7`, propriétaire du dépôt) → *Settings → Developer settings → Personal access tokens → Fine-grained tokens* → *Generate*
+   - Repository access : **Only select repositories** → `lesmielleries`
+   - Permissions : **Contents → Read and write**
+   - Copier le token (`github_pat_…`).
+3. **Vercel** → projet → *Settings → Environment Variables* (Production) :
+
+   | Variable | Valeur |
+   |---|---|
+   | `STUDIO_GOOGLE_CLIENT_ID` | Client ID Google |
+   | `STUDIO_GOOGLE_CLIENT_SECRET` | Client secret Google |
+   | `STUDIO_GOOGLE_MODERATORS` | `client@gmail.com,dylanmenga05@gmail.com` — **sans espaces** |
+   | `STUDIO_GITHUB_TOKEN` | le token GitHub |
+
+4. **Redéployer** (*Deployments → … → Redeploy*) : les variables ne sont prises en compte qu'au déploiement suivant.
+5. Le client ouvre `https://lesmielleries.com/_studio` → « Se connecter avec Google » → il édite → **Publier** : Studio fait un commit sur `main`, Vercel redéploie en ~1 min.
+
+Retirer un accès = supprimer l'e-mail de `STUDIO_GOOGLE_MODERATORS` puis redéployer.
+
 ## Performances (Lighthouse mobile, 4G lente simulée, serveur local)
 
 | Page | Perf. | Accessibilité | Bonnes pratiques | SEO |
