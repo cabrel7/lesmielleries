@@ -11,16 +11,28 @@ const { data: featured } = await useAsyncData(
 )
 const { data: posts } = await useAsyncData(
   () => `home-posts-${cols.value.blog}`,
-  () => queryCollection(cols.value.blog).order('date', 'DESC').limit(3).all(),
+  () => queryCollection(cols.value.blog).order('date', 'DESC').limit(8).all(),
   { watch: [cols] },
 )
 
-useSeoMeta({
+const { locale } = useI18n()
+usePageSeo({
   title: () => t('home.seoTitle'),
   description: () => t('home.seoDesc'),
-  ogTitle: () => t('home.seoTitle'),
-  ogDescription: () => t('home.seoDesc'),
-  ogImage: '/images/ambiance/filet-miel.webp',
+  image: () => `/og/${locale.value}/home.jpg`,
+})
+const faq = computed(() => (tm('home.faq') as Record<string, unknown>[]).map(x => ({ q: rt(x.q as never), a: rt(x.a as never) })))
+const openFaq = ref<number | null>(0)
+useHead({
+  script: [{
+    key: 'ld-faq',
+    type: 'application/ld+json',
+    innerHTML: () => JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': faq.value.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+    }),
+  }],
 })
 useHead({
   titleTemplate: '%s',
@@ -74,7 +86,7 @@ const cells = computed(() => {
     <!-- ============ HERO ============ -->
     <section ref="hero" class="hero">
       <div class="hero__media">
-        <BgVideo eager poster="/images/ambiance/hero-poster.webp" webm="/videos/hero-1280.webm" mp4="/videos/hero-1280.mp4" mp4-mobile="/videos/hero-720.mp4" />
+        <BgVideo eager :rate="0.9" poster="/images/ambiance/hero-poster.webp" webm="/videos/hero-1280.webm" mp4="/videos/hero-1280.mp4" mp4-mobile="/videos/hero-720.mp4" />
       </div>
       <div class="hero__shade" />
       <div class="hero__content container">
@@ -251,8 +263,30 @@ const cells = computed(() => {
           </div>
           <NuxtLink :to="localePath('/blog')" class="link-arrow reveal" v-reveal>{{ t('home.blogCta') }} <AppIcon name="arrow-right" /></NuxtLink>
         </div>
-        <div class="blog-grid">
-          <BlogCard v-for="(p, i) in posts" :key="p.path" :post="p" :index="i" />
+        <AppCarousel :items="posts" :item-key="(p) => p.path" :autoplay="5500" :label="t('home.blogTitle')">
+          <template #default="{ item, index }">
+            <BlogCard :post="item" :index="index % 3" />
+          </template>
+        </AppCarousel>
+      </div>
+    </section>
+
+    <!-- ============ FAQ (SEO + GEO) ============ -->
+    <section class="faq section section-cream">
+      <div class="container faq__grid">
+        <div class="section-head">
+          <p class="eyebrow reveal" v-reveal>{{ t('home.faqLabel') }}</p>
+          <h2 class="h2 reveal" v-reveal>{{ t('home.faqTitle') }}</h2>
+        </div>
+        <div class="faq__list">
+          <div v-for="(f, i) in faq" :key="i" class="faq__item" :class="{ open: openFaq === i }">
+            <h3>
+              <button type="button" class="faq__q" :aria-expanded="openFaq === i" :aria-controls="`faq-${i}`" @click="openFaq = openFaq === i ? null : i">
+                {{ f.q }}<span class="faq__plus" aria-hidden="true" />
+              </button>
+            </h3>
+            <div :id="`faq-${i}`" class="faq__a"><div><p>{{ f.a }}</p></div></div>
+          </div>
         </div>
       </div>
     </section>
@@ -412,8 +446,25 @@ const cells = computed(() => {
 .blog-grid { display: grid; gap: 2.5rem; }
 @media (min-width: 760px) { .blog-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
 
+/* ---------- FAQ ---------- */
+.faq__grid { display: grid; gap: 1rem; }
+.faq__list { border-top: 1px solid var(--line); }
+.faq__item { border-bottom: 1px solid var(--line); }
+.faq__item h3 { font-size: inherit; }
+.faq__q { display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 1.5rem; padding: 1.35rem 0; border: 0; background: none; text-align: left; font-family: var(--font-display); font-size: var(--step-1); line-height: 1.3; }
+.faq__plus { position: relative; flex: none; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); transition: background 0.3s, border-color 0.3s; }
+.faq__plus::before, .faq__plus::after { content: ''; position: absolute; left: 11px; right: 11px; top: 50%; height: 1.5px; margin-top: -0.75px; background: currentColor; transition: transform 0.4s var(--ease); }
+.faq__plus::after { transform: rotate(90deg); }
+.faq__item.open .faq__plus { background: var(--yellow); border-color: var(--yellow); }
+.faq__item.open .faq__plus::after { transform: rotate(0); }
+.faq__a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.5s var(--ease); }
+.faq__a > div { overflow: hidden; }
+.faq__item.open .faq__a { grid-template-rows: 1fr; }
+.faq__a p { padding: 0 3.5rem 1.5rem 0; color: var(--ink-2); }
+@media (min-width: 960px) { .faq__grid { grid-template-columns: 0.8fr 1.2fr; gap: 5rem; } }
+
 /* ---------- CTA final ---------- */
-.final { padding: 0 0 var(--section); }
+.final { padding: var(--section) 0; }
 .final__inner {
   display: grid;
   gap: 1rem;

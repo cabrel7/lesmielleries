@@ -106,6 +106,34 @@
       "Export",
       "Bulk",
       "22 kg wax"
+    ],
+    "faqLabel": "FAQ",
+    "faqTitle": "Everything about our honey",
+    "faq": [
+      {
+        "q": "Where is Les Mielleries honey produced?",
+        "a": "In Cameroon's three main beekeeping regions: the savannah (North, Adamawa), the mountains and forests (West, North-West) and Mount Oku. Hives are set far from cities and industrial areas."
+      },
+      {
+        "q": "Is your honey 100% pure?",
+        "a": "Yes. Our honey is simply filtered, never heated or processed, then packed in Douala. Nothing is added."
+      },
+      {
+        "q": "How do I order?",
+        "a": "The easiest way is WhatsApp at +237 640 65 77 49, straight from any product page (the message is pre-filled). Professionals can also request a quote online."
+      },
+      {
+        "q": "Do you export?",
+        "a": "Yes. As Cameroon's leading honey packer and exporter, we ship to more than 5 countries: honey in drums and jerrycans, beeswax in 22 kg blocks, propolis. Every request gets its own quote."
+      },
+      {
+        "q": "Why has my honey crystallised?",
+        "a": "It's natural and actually a good sign: the glucose in honey forms crystals over time. To make it runny again, place the jar in a warm water bath (40 °C maximum)."
+      },
+      {
+        "q": "What is Oku white honey?",
+        "a": "A white, creamy honey harvested around Mount Oku, in the North-West, in a village with Protected Geographical Indication (PGI) status. It is one of the most distinctive honeys in Africa."
+      }
     ]
   },
   "story": {
@@ -258,7 +286,7 @@
   },
   "contact": {
     "seoTitle": "Contact — Les Mielleries",
-    "seoDesc": "Contact Les Mielleries in Douala: phone, WhatsApp, email.",
+    "seoDesc": "Contact Les Mielleries in Douala, Cameroon: order honey on WhatsApp at +237 640 65 77 49, professional and export quotes, email and address.",
     "eyebrow": "Contact",
     "title": "Let's talk honey",
     "lead": "Individual or professional, a question or an order: write to us, we reply quickly.",

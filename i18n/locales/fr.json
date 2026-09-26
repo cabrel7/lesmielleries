@@ -106,6 +106,34 @@
       "Export",
       "Vrac",
       "Cire 22 kg"
+    ],
+    "faqLabel": "Questions fréquentes",
+    "faqTitle": "Tout savoir sur notre miel",
+    "faq": [
+      {
+        "q": "Où est produit le miel des Mielleries ?",
+        "a": "Dans les trois grandes régions apicoles du Cameroun : la savane (Nord, Adamaoua), les montagnes et forêts (Ouest, Nord-Ouest) et le mont Oku. Les ruches sont installées loin des villes et des zones industrielles."
+      },
+      {
+        "q": "Votre miel est-il 100 % pur ?",
+        "a": "Oui. Notre miel est simplement filtré, jamais chauffé ni préparé, puis conditionné à Douala. Rien n'est ajouté."
+      },
+      {
+        "q": "Comment commander ?",
+        "a": "Le plus simple : WhatsApp au +237 640 65 77 49, directement depuis chaque fiche produit (le message est pré-rempli). Les professionnels peuvent aussi demander un devis en ligne."
+      },
+      {
+        "q": "Exportez-vous à l'étranger ?",
+        "a": "Oui. Premier conditionneur et exportateur de miel du Cameroun, nous livrons dans plus de 5 pays : miel en fût et en bidon, cire d'abeille en blocs de 22 kg, propolis. Chaque demande fait l'objet d'un devis."
+      },
+      {
+        "q": "Pourquoi mon miel a-t-il cristallisé ?",
+        "a": "C'est naturel et c'est plutôt bon signe : le glucose du miel forme des cristaux avec le temps. Pour le rendre liquide, placez le pot au bain-marie tiède (40 °C maximum)."
+      },
+      {
+        "q": "Qu'est-ce que le miel blanc d'Oku ?",
+        "a": "Un miel blanc et crémeux récolté autour du mont Oku, dans le Nord-Ouest, dans un village classé Indication Géographique Protégée (IGP). C'est l'un des miels les plus singuliers d'Afrique."
+      }
     ]
   },
   "story": {
@@ -258,7 +286,7 @@
   },
   "contact": {
     "seoTitle": "Contact — Les Mielleries",
-    "seoDesc": "Contactez Les Mielleries à Douala : téléphone, WhatsApp, e-mail.",
+    "seoDesc": "Contactez Les Mielleries à Douala (Cameroun) : commande de miel par WhatsApp au +237 640 65 77 49, devis professionnels et export, e-mail et adresse.",
     "eyebrow": "Contact",
     "title": "Parlons miel",
     "lead": "Particulier ou professionnel, une question ou une commande : écrivez-nous, nous répondons vite.",

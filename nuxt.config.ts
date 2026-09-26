@@ -22,6 +22,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
+        { rel: 'icon', type: 'image/png', href: '/brand/icon-32.png', sizes: '32x32' },
         { rel: 'icon', type: 'image/png', href: '/brand/icon-192.png', sizes: '192x192' },
         { rel: 'apple-touch-icon', href: '/brand/icon-180.png' },
       ],
@@ -29,6 +30,13 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
   },
 
+
+  runtimeConfig: {
+    public: {
+      // URL publique du site (SEO : canonical, sitemap, Open Graph). Surcharger avec NUXT_PUBLIC_SITE_URL.
+      siteUrl: 'https://lesmielleries.com',
+    },
+  },
 
   // ---------- Contenu (produits, blog, réglages) ----------
   content: {
@@ -90,7 +98,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/en'],
+      routes: ['/', '/en', '/sitemap.xml', '/llms.txt', '/robots.txt'],
       failOnError: false,
       ignore: [/produit=/],
     },

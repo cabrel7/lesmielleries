@@ -3,27 +3,9 @@ const { t } = useI18n()
 const settings = await useSettings()
 const wa = computed(() => waLink(settings.value.whatsapp, t('wa.generic')))
 
-useSeoMeta({
-  title: () => t('contact.seoTitle'),
-  description: () => t('contact.seoDesc'),
-  ogTitle: () => t('contact.seoTitle'),
-  ogDescription: () => t('contact.seoDesc'),
-})
-useHead({
-  script: [{
-    type: 'application/ld+json',
-    innerHTML: () => JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      'name': settings.value.companyName,
-      'url': 'https://lesmielleries.com',
-      'logo': 'https://lesmielleries.com/brand/icon-512.png',
-      'telephone': settings.value.phone,
-      'email': settings.value.email,
-      'address': { '@type': 'PostalAddress', 'postOfficeBoxNumber': '15516', 'addressLocality': 'Douala', 'addressCountry': 'CM' },
-    }),
-  }],
-})
+const { locale } = useI18n()
+usePageSeo({ title: () => t('contact.seoTitle'), description: () => t('contact.seoDesc'), image: () => `/og/${locale.value}/contact.jpg` })
+useBreadcrumbLd(() => [{ name: t('nav.home'), path: locale.value === 'en' ? '/en' : '/' }, { name: t('nav.contact'), path: locale.value === 'en' ? '/en/contact' : '/contact' }])
 </script>
 
 <template>

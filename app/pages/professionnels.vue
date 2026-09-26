@@ -6,13 +6,9 @@ const sectors = computed(() => (tm('pro.sectors') as unknown[]).map(x => rt(x as
 const offerImgs = ['/images/products/fut-1.webp', '/images/products/cire-1.webp', '/images/products/propolis-1.webp', '/images/products/barrette-1.webp']
 const preset = computed(() => (typeof route.query.produit === 'string' ? route.query.produit : ''))
 
-useSeoMeta({
-  title: () => t('pro.seoTitle'),
-  description: () => t('pro.seoDesc'),
-  ogTitle: () => t('pro.seoTitle'),
-  ogDescription: () => t('pro.seoDesc'),
-  ogImage: '/images/products/fut-2.webp',
-})
+const { locale } = useI18n()
+usePageSeo({ title: () => t('pro.seoTitle'), description: () => t('pro.seoDesc'), image: () => `/og/${locale.value}/pro.jpg` })
+useBreadcrumbLd(() => [{ name: t('nav.home'), path: locale.value === 'en' ? '/en' : '/' }, { name: t('nav.pro'), path: locale.value === 'en' ? '/en/professionals' : '/professionnels' }])
 </script>
 
 <template>

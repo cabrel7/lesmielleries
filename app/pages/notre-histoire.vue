@@ -7,13 +7,9 @@ const values = computed(() => (tm('story.values') as Record<string, unknown>[]).
 const regions = computed(() => (tm('home.regions') as Record<string, unknown>[]).map(x => ({ name: rt(x.name as never), area: rt(x.area as never) })))
 const valueIcons = ['spoon', 'handshake', 'shield', 'leaf']
 
-useSeoMeta({
-  title: () => t('story.seoTitle'),
-  description: () => t('story.seoDesc'),
-  ogTitle: () => t('story.seoTitle'),
-  ogDescription: () => t('story.seoDesc'),
-  ogImage: '/images/ambiance/cuillere-miel.webp',
-})
+const { locale } = useI18n()
+usePageSeo({ title: () => t('story.seoTitle'), description: () => t('story.seoDesc'), image: () => `/og/${locale.value}/story.jpg` })
+useBreadcrumbLd(() => [{ name: t('nav.home'), path: locale.value === 'en' ? '/en' : '/' }, { name: t('nav.story'), path: locale.value === 'en' ? '/en/our-story' : '/notre-histoire' }])
 
 const line = ref<HTMLElement | null>(null)
 let ctx: { revert: () => void } | null = null

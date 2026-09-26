@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
 const settings = await useSettings()
-useSeoMeta({ title: () => t('legal.seoTitle'), robots: 'noindex, follow' })
+usePageSeo({ title: () => t('legal.seoTitle'), description: () => t('legal.title'), noindex: true })
 </script>
 
 <template>

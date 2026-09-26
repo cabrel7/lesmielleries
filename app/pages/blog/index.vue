@@ -12,13 +12,9 @@ const list = computed(() => (posts.value || []).filter(p => active.value === '*'
 const first = computed(() => list.value[0])
 const rest = computed(() => list.value.slice(1))
 
-useSeoMeta({
-  title: () => t('blog.seoTitle'),
-  description: () => t('blog.seoDesc'),
-  ogTitle: () => t('blog.seoTitle'),
-  ogDescription: () => t('blog.seoDesc'),
-  ogImage: '/images/ambiance/blog-oku.webp',
-})
+const { locale } = useI18n()
+usePageSeo({ title: () => t('blog.seoTitle'), description: () => t('blog.seoDesc'), image: () => `/og/${locale.value}/blog.jpg` })
+useBreadcrumbLd(() => [{ name: t('nav.home'), path: locale.value === 'en' ? '/en' : '/' }, { name: t('nav.blog'), path: locale.value === 'en' ? '/en/blog' : '/blog' }])
 </script>
 
 <template>

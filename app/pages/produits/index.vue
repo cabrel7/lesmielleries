@@ -20,13 +20,9 @@ watch(active, (v) => {
   navigateTo({ query: v === 'all' ? {} : { cat: v } }, { replace: true })
 })
 
-useSeoMeta({
-  title: () => t('products.seoTitle'),
-  description: () => t('products.seoDesc'),
-  ogTitle: () => t('products.seoTitle'),
-  ogDescription: () => t('products.seoDesc'),
-  ogImage: '/images/products/gamme-bouteilles.webp',
-})
+const { locale } = useI18n()
+usePageSeo({ title: () => t('products.seoTitle'), description: () => t('products.seoDesc'), image: () => `/og/${locale.value}/products.jpg` })
+useBreadcrumbLd(() => [{ name: t('nav.home'), path: locale.value === 'en' ? '/en' : '/' }, { name: t('nav.products'), path: locale.value === 'en' ? '/en/products' : '/produits' }])
 </script>
 
 <template>

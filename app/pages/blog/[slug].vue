@@ -16,13 +16,13 @@ if (!post.value) throw createError({ statusCode: 404, statusMessage: 'Article in
 
 const { data: others } = await useAsyncData(
   () => `post-others-${cols.value.blog}-${slug.value}`,
-  async () => (await queryCollection(cols.value.blog).order('date', 'DESC').all()).filter(p => slugOf(p.path) !== slug.value).slice(0, 3),
+  async () => (await queryCollection(cols.value.blog).order('date', 'DESC').all()).filter(p => slugOf(p.path) !== slug.value),
   { watch: [cols, slug] },
 )
 
 const p = computed(() => post.value!)
 const toc = computed(() => (p.value.body as unknown as { toc?: { links?: { id: string, text: string }[] } })?.toc?.links || [])
-const shareUrl = computed(() => `https://lesmielleries.com${route.path}`)
+const shareUrl = computed(() => `${useSiteUrl()}${route.path}`)
 const shareWa = computed(() => `https://wa.me/?text=${encodeURIComponent(`${p.value.title} — ${shareUrl.value}`)}`)
 
 // Barre de progression de lecture
@@ -36,26 +36,36 @@ function onScroll() {
 onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
 onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
 
-useSeoMeta({
+usePageSeo({
   title: () => `${p.value.title} — Les Mielleries`,
   description: () => p.value.description,
-  ogTitle: () => p.value.title,
-  ogDescription: () => p.value.description,
-  ogImage: () => p.value.cover,
-  ogType: 'article',
+  image: () => `/og/${locale.value}/blog-${slug.value}.jpg`,
+  imageAlt: () => p.value.title,
+  type: 'article',
+  publishedTime: () => p.value.date,
 })
+useBreadcrumbLd(() => [
+  { name: t('nav.home'), path: locale.value === 'en' ? '/en' : '/' },
+  { name: t('nav.blog'), path: locale.value === 'en' ? '/en/blog' : '/blog' },
+  { name: p.value.title, path: route.path },
+])
+const siteUrl = useSiteUrl()
 useHead({
   script: [{
+    key: 'ld-article',
     type: 'application/ld+json',
     innerHTML: () => JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
       'headline': p.value.title,
       'description': p.value.description,
-      'image': `https://lesmielleries.com${p.value.cover}`,
+      'image': `${siteUrl}/og/${locale.value}/blog-${slug.value}.jpg`,
+      'url': `${siteUrl}${route.path}`,
+      'mainEntityOfPage': `${siteUrl}${route.path}`,
       'datePublished': p.value.date,
+      'dateModified': p.value.date,
       'author': { '@type': 'Organization', 'name': p.value.author },
-      'publisher': { '@type': 'Organization', 'name': settings.value.companyName },
+      'publisher': { '@id': `${siteUrl}/#organization` },
       'inLanguage': locale.value,
     }),
   }],
@@ -95,9 +105,11 @@ useHead({
         <div class="section-head">
           <h2 class="h2">{{ t('blog.related') }}</h2>
         </div>
-        <div class="art__others">
-          <BlogCard v-for="(o, i) in others" :key="o.path" :post="o" :index="i" />
-        </div>
+        <AppCarousel :items="others" :item-key="(o) => o.path" :autoplay="6000" :label="t('blog.related')">
+          <template #default="{ item, index }">
+            <BlogCard :post="item" :index="index % 3" />
+          </template>
+        </AppCarousel>
       </div>
     </section>
   </article>

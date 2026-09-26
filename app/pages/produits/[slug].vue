@@ -21,7 +21,7 @@ const { data: related } = await useAsyncData(
     const all = await queryCollection(cols.value.products).order('order', 'ASC').all()
     const others = all.filter(p => slugOf(p.path) !== slug.value)
     const same = others.filter(p => p.category === product.value?.category)
-    return [...same, ...others.filter(p => !same.includes(p))].slice(0, 3)
+    return [...same, ...others.filter(p => !same.includes(p))]
   },
   { watch: [cols, slug] },
 )
@@ -47,25 +47,42 @@ const specs = computed(() => [
 const openPanel = ref<string | null>('usages')
 const promise = computed(() => (tm('product.promise') as unknown[]).map(x => rt(x as never)))
 
-useSeoMeta({
-  title: () => `${p.value.title} — Les Mielleries`,
+usePageSeo({
+  title: () => `${p.value.title} — ${p.value.subtitle || 'Les Mielleries'}`,
   description: () => p.value.summary,
-  ogTitle: () => `${p.value.title} — Les Mielleries`,
-  ogDescription: () => p.value.summary,
-  ogImage: () => p.value.cover,
-  ogType: 'product' as never,
+  image: () => `/og/${locale.value}/produit-${slug.value}.jpg`,
+  imageAlt: () => p.value.title,
+  type: 'product',
 })
+useBreadcrumbLd(() => [
+  { name: t('nav.home'), path: locale.value === 'en' ? '/en' : '/' },
+  { name: t('nav.products'), path: locale.value === 'en' ? '/en/products' : '/produits' },
+  { name: p.value.title, path: route.path },
+])
+const siteUrl = useSiteUrl()
 useHead({
   script: [{
+    key: 'ld-product',
     type: 'application/ld+json',
     innerHTML: () => JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Product',
       'name': p.value.title,
       'description': p.value.summary,
-      'image': images.value.map(i => `https://lesmielleries.com${i.src}`),
-      'brand': { '@type': 'Brand', 'name': 'Antamiel — Les Mielleries' },
-      'countryOfOrigin': 'CM',
+      'image': images.value.map(i => `${siteUrl}${i.src}`),
+      'url': `${siteUrl}${route.path}`,
+      'sku': slug.value,
+      'category': p.value.kind,
+      'brand': { '@type': 'Brand', 'name': 'Antamiel' },
+      'manufacturer': { '@id': `${siteUrl}/#organization` },
+      'countryOfOrigin': { '@type': 'Country', 'name': 'Cameroon' },
+      'additionalProperty': [
+        { k: t('product.origin'), v: p.value.region },
+        { k: t('product.color'), v: p.value.color },
+        { k: t('product.taste'), v: p.value.taste },
+        { k: t('product.texture'), v: p.value.texture },
+        { k: t('product.formats'), v: (p.value.formats || []).join(', ') },
+      ].filter(x => x.v).map(x => ({ '@type': 'PropertyValue', 'name': x.k, 'value': x.v })),
     }),
   }],
 })
@@ -168,9 +185,11 @@ onMounted(() => {
         <div class="section-head">
           <h2 class="h2 reveal" v-reveal>{{ t('product.related') }}</h2>
         </div>
-        <div class="rel">
-          <ProductCard v-for="(r, i) in related" :key="r.path" :product="r" :index="i" />
-        </div>
+        <AppCarousel :items="related" :item-key="(r) => r.path" :autoplay="6000" :label="t('product.related')">
+          <template #default="{ item, index }">
+            <ProductCard :product="item" :index="index % 3" />
+          </template>
+        </AppCarousel>
       </div>
     </section>
 

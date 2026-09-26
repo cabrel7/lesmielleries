@@ -86,6 +86,23 @@ Seules les adresses listées dans `STUDIO_GOOGLE_MODERATORS` peuvent entrer dans
 
 Retirer un accès = supprimer l'e-mail de `STUDIO_GOOGLE_MODERATORS` puis redéployer.
 
+## SEO & GEO
+
+| Élément | Où |
+|---|---|
+| Titre, description, Open Graph, Twitter (URL absolues) | `app/composables/useSeo.ts` → `usePageSeo()` sur chaque page |
+| Images de partage 1200×630 (FR/EN, 38 images) | `public/og/` — régénérables avec le script de génération |
+| Canonical + `hreflang` FR/EN/x-default | automatique (`@nuxtjs/i18n`) |
+| `sitemap.xml` (pages, produits, articles, images, alternatives FR/EN) | `server/routes/sitemap.xml.ts` — suit le contenu automatiquement |
+| `robots.txt` (Studio bloqué, robots IA autorisés) | `server/routes/robots.txt.ts` |
+| `llms.txt` (fiche factuelle pour ChatGPT, Claude, Perplexity…) | `server/routes/llms.txt.ts` |
+| JSON-LD : Organization/LocalBusiness (géolocalisée), WebSite, FAQPage, Product, BlogPosting, BreadcrumbList | `app/app.vue` + pages |
+| Géolocalisation (`geo.region`, `geo.position`, `ICBM`) : Douala, Littoral | `app/app.vue` |
+| Favicon, apple-touch-icon, icônes Android (maskable), `manifest.webmanifest` | `public/` |
+
+Après la mise en ligne : déclarer `https://lesmielleries.com/sitemap.xml` dans **Google Search Console** et **Bing Webmaster Tools**, et créer la fiche **Google Business Profile** (Douala) — c'est le levier n°1 du référencement local.
+Pour changer de domaine : variable `NUXT_PUBLIC_SITE_URL`.
+
 ## Performances (Lighthouse mobile, 4G lente simulée, serveur local)
 
 | Page | Perf. | Accessibilité | Bonnes pratiques | SEO |
